@@ -1,6 +1,6 @@
 {
   "item.doublejump.cabbage": "Cabbage",
-  "item.doublejump.cabbage_seed": "Cabbage Seeds",
+  "item.doublejump.cabbage_seeds": "Cabbage Seeds",
   "block.doublejump.cabbage_crop": "Cabbage Crop",
   "itemGroup.doublejump.food": "Double Jump Food",
 
@@ -8,5 +8,15 @@
   "effect.doublejump.flatulence": "Flatulence",
   "effect.doublejump.flatulence.description": "Causes uncontrollable giggles when sneaking.",
 
-  "subtitles.doublejump.fart": "Fart"
+  "subtitles.doublejump.fart": "Fart",
+
+  "item.minecraft.potion.effect.flatulence": "Potion of Flatulence",
+  "item.minecraft.splash_potion.effect.flatulence":  "Splash Potion of Flatulence",
+  "item.minecraft.lingering_potion.effect.flatulence":  "Lingering Potion of Flatulence",
+  "item.minecraft.tipped_arrow.effect.flatulence": "Arrow of Flatulence",
+
+  "item.minecraft.potion.effect.long_flatulence": "Potion of Flatulence",
+  "item.minecraft.splash_potion.effect.long_flatulence":  "Splash Potion of Flatulence",
+  "item.minecraft.lingering_potion.effect.long_flatulence":  "Lingering Potion of Flatulence",
+  "item.minecraft.tipped_arrow.effect.long_flatulence": "Arrow of Flatulence"
 }

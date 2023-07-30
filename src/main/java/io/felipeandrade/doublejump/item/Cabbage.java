@@ -6,8 +6,8 @@ import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 
-public class CabbageItem extends Item {
-    public CabbageItem() {
+public class Cabbage extends Item {
+    public Cabbage() {
         super(new Item.Settings()
                 .group(ItemGroup.FOOD)
                 .food(new FoodComponent.Builder()
