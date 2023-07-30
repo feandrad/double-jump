@@ -6,5 +6,7 @@
 
   "statusEffect.doublejump.flatulence": "Flatulence",
   "effect.doublejump.flatulence": "Flatulence",
-  "effect.doublejump.flatulence.description": "Causes uncontrollable giggles when sneaking."
+  "effect.doublejump.flatulence.description": "Causes uncontrollable giggles when sneaking.",
+
+  "subtitles.doublejump.fart": "Fart"
 }

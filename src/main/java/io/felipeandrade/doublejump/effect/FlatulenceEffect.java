@@ -4,11 +4,16 @@ import io.felipeandrade.doublejump.DoubleJumpMod;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.Identifier;
 
+import java.util.Random;
+
 public class FlatulenceEffect extends StatusEffect {
     public static final Identifier ID = new Identifier(DoubleJumpMod.MOD_ID, "flatulence"); // Ensure consistent identifier
+
+    private Random random = new Random();
 
     public FlatulenceEffect() {
         super(StatusEffectCategory.NEUTRAL, 0x660066); // Set the particle tint to a darker purple (hex code: #660066)
@@ -16,19 +21,19 @@ public class FlatulenceEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        // Custom effect logic for the "Flatulence" potion effect
-        // For example, you can add more behavior here when the effect is active over time.
-        // In this case, we'll randomly play the fart sound with a delay.
-        playFartSound(entity);
+        if (entity instanceof PlayerEntity && entity.isSneaking()) {
+            playFartSound(entity);
+        } else {
+            // 10% chance to call playFartSound(entity);
+            if (random.nextDouble() <= 0.1) {
+                playFartSound(entity);
+            }
+        }
     }
 
     @Override
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
-        // You can add custom logic here to determine when the effect should apply an update effect.
-        // For example, you can return true here to apply the effect on every tick while the potion is active.
-        // In this case, we'll return false, as we are handling the effect in the applyUpdateEffect method.
-
-        int i = 50 >> amplifier;
+        int i = random.nextInt(25, 31) >> amplifier;
         if (i > 0) {
             return duration % i == 0;
         } else {
@@ -37,6 +42,8 @@ public class FlatulenceEffect extends StatusEffect {
     }
 
     private void playFartSound(LivingEntity entity) {
-        entity.world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), DoubleJumpMod.SOUND_FART, SoundCategory.NEUTRAL, 1.0F, 1.0F);
+        if (entity.world.isClient) return;
+
+        entity.world.playSound(null, entity.getBlockPos(), DoubleJumpMod.FART_SOUND_EVENT, SoundCategory.NEUTRAL, 1.0F, random.nextFloat(0.3F, 1.3F));
     }
 }

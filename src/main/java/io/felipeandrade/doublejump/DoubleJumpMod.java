@@ -4,7 +4,6 @@ import io.felipeandrade.doublejump.block.CabbageCropBlock;
 import io.felipeandrade.doublejump.effect.FlatulenceEffect;
 import io.felipeandrade.doublejump.item.CabbageItem;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.block.Block;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -23,7 +22,9 @@ public class DoubleJumpMod implements ModInitializer {
     public static final StatusEffect FLATULENCE_EFFECT = new FlatulenceEffect();
     public static final Potion FLATULENCE_POTION = new Potion(new StatusEffectInstance(FLATULENCE_EFFECT));
 
-    public static final SoundEvent SOUND_FART = new SoundEvent(new Identifier(MOD_ID, "fart"));
+
+    public static final Identifier FART_SOUND_ID = new Identifier(MOD_ID, "fart");
+    public static SoundEvent FART_SOUND_EVENT = new SoundEvent(FART_SOUND_ID);
 
     public static final Block CABBAGE_CROP = new CabbageCropBlock();
 
@@ -32,12 +33,7 @@ public class DoubleJumpMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        // Register the custom packet handler
-        ServerPlayNetworking.registerGlobalReceiver(new Identifier(MOD_ID, "play_sound"), (server, player, handler, buf, responseSender) -> {
-            server.execute(() -> {
-                player.playSound(DoubleJumpMod.SOUND_FART, 1.0F, 1.0F);
-            });
-        });
+        Registry.register(Registry.SOUND_EVENT, FART_SOUND_ID, FART_SOUND_EVENT);
 
         Registry.register(Registry.STATUS_EFFECT, FlatulenceEffect.ID, FLATULENCE_EFFECT);
 
@@ -47,8 +43,6 @@ public class DoubleJumpMod implements ModInitializer {
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "cabbage_crop"), CABBAGE_CROP);
 
         Registry.register(Registry.POTION, new Identifier(MOD_ID, "flatulence"), FLATULENCE_POTION);
-
-        Registry.register(Registry.SOUND_EVENT, new Identifier(MOD_ID, "fart"), SOUND_FART);
     }
 }
 
