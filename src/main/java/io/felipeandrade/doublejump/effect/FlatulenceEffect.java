@@ -6,12 +6,10 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.util.Identifier;
 
 import java.util.Random;
 
 public class FlatulenceEffect extends StatusEffect {
-    public static final Identifier ID = new Identifier(DoubleJumpMod.MOD_ID, "flatulence"); // Ensure consistent identifier
 
     private Random random = new Random();
 

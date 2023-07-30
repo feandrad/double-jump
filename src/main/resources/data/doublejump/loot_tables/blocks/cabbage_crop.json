@@ -27,7 +27,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "doublejump:cabbage_seed"
+              "name": "doublejump:cabbage_seeds"
             }
           ]
         }
@@ -59,7 +59,7 @@
               }
             }
           ],
-          "name": "doublejump:cabbage_seed"
+          "name": "doublejump:cabbage_seeds"
         }
       ],
       "rolls": 1.0
