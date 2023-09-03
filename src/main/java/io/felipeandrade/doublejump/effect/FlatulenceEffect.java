@@ -40,8 +40,8 @@ public class FlatulenceEffect extends StatusEffect {
     }
 
     private void playFartSound(LivingEntity entity) {
-        if (entity.world.isClient) return;
+        if (entity.getWorld().isClient) return;
 
-        entity.world.playSound(null, entity.getBlockPos(), DoubleJumpMod.FART_SOUND_EVENT, SoundCategory.NEUTRAL, 1.0F, random.nextFloat(0.3F, 1.3F));
+        entity.getWorld().playSound(null, entity.getBlockPos(), DoubleJumpMod.FART_SOUND_EVENT, SoundCategory.NEUTRAL, 1.0F, random.nextFloat(0.3F, 1.3F));
     }
 }
