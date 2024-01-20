@@ -3,13 +3,17 @@ package io.felipeandrade.doublejump;
 import io.felipeandrade.doublejump.block.CabbageCropBlock;
 import io.felipeandrade.doublejump.effect.FlatulenceEffect;
 import io.felipeandrade.doublejump.item.Cabbage;
+import io.felipeandrade.doublejump.item.MilkBottle;
+import io.felipeandrade.doublejump.item.SplashPotionOfCleansing;
 import io.felipeandrade.doublejump.mixin.BrewingRecipeRegistryMixin;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.ComposterBlock;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
 import net.minecraft.registry.Registries;
@@ -30,6 +34,8 @@ public class DoubleJumpMod implements ModInitializer {
 
     public static final Block CABBAGE_CROP = new CabbageCropBlock();
 
+    public static final Item MILK_BOTTLE = new MilkBottle(new Item.Settings().maxCount(16));
+    public static final Item SPLASH_POTION_OF_CLEANSING = new SplashPotionOfCleansing(new Item.Settings().maxCount(16));
     public static final Item CABBAGE = new Cabbage();
     public static final Item CABBAGE_SEEDS = new AliasedBlockItem(CABBAGE_CROP, new Item.Settings());
 
@@ -44,6 +50,8 @@ public class DoubleJumpMod implements ModInitializer {
 
         Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "cabbage_crop"), CABBAGE_CROP);
 
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "milk_bottle"), MILK_BOTTLE);
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "splash_potion_cleansing"), SPLASH_POTION_OF_CLEANSING);
         Registry.register(Registries.POTION, new Identifier(MOD_ID, "flatulence"), FLATULENCE_POTION);
         Registry.register(Registries.POTION, new Identifier(MOD_ID, "long_flatulence"), LONG_FLATULENCE_POTION);
 
@@ -52,6 +60,16 @@ public class DoubleJumpMod implements ModInitializer {
 
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(CABBAGE_SEEDS, 0.3F);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(CABBAGE, 0.65F);
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(content -> {
+            content.add(CABBAGE_SEEDS);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {
+            content.add(CABBAGE);
+            content.add(MILK_BOTTLE);
+            content.add(SPLASH_POTION_OF_CLEANSING);
+        });
     }
 }
 

@@ -18,5 +18,8 @@
   "item.minecraft.potion.effect.long_flatulence": "Potion of Flatulence",
   "item.minecraft.splash_potion.effect.long_flatulence":  "Splash Potion of Flatulence",
   "item.minecraft.lingering_potion.effect.long_flatulence":  "Lingering Potion of Flatulence",
-  "item.minecraft.tipped_arrow.effect.long_flatulence": "Arrow of Flatulence"
+  "item.minecraft.tipped_arrow.effect.long_flatulence": "Arrow of Flatulence",
+
+  "item.doublejump.milk_bottle": "Milk Bottle",
+  "item.doublejump.splash_potion_cleansing":  "Splash Potion of Cleansing"
 }
