@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "doublejump:milk_bottle"
+    },
+    {
+      "item": "doublejump:milk_bottle"
+    },
+    {
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "item": "doublejump:milk_bottle"
+    }
+  ],
+  "result": {
+    "item": "doublejump:splash_potion_cleansing",
+    "count": 3
+  }
+}
