@@ -1,0 +1,25 @@
+{
+  "item.passinggas.cabbage": "Cabbage",
+  "item.passinggas.cabbage_seeds": "Cabbage Seeds",
+  "block.passinggas.cabbage_crop": "Cabbage Crop",
+  "itemGroup.passinggas.food": "Double Jump Food",
+
+  "statusEffect.passinggas.flatulence": "Flatulence",
+  "effect.passinggas.flatulence": "Flatulence",
+  "effect.passinggas.flatulence.description": "Causes uncontrollable giggles when sneaking.",
+
+  "subtitles.passinggas.fart": "Fart",
+
+  "item.minecraft.potion.effect.flatulence": "Potion of Flatulence",
+  "item.minecraft.splash_potion.effect.flatulence":  "Splash Potion of Flatulence",
+  "item.minecraft.lingering_potion.effect.flatulence":  "Lingering Potion of Flatulence",
+  "item.minecraft.tipped_arrow.effect.flatulence": "Arrow of Flatulence",
+
+  "item.minecraft.potion.effect.long_flatulence": "Potion of Flatulence",
+  "item.minecraft.splash_potion.effect.long_flatulence":  "Splash Potion of Flatulence",
+  "item.minecraft.lingering_potion.effect.long_flatulence":  "Lingering Potion of Flatulence",
+  "item.minecraft.tipped_arrow.effect.long_flatulence": "Arrow of Flatulence",
+
+  "item.passinggas.milk_bottle": "Milk Bottle",
+  "item.passinggas.splash_potion_cleansing":  "Splash Potion of Cleansing"
+}

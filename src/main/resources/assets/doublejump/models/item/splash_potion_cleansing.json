@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "doublejump:item/splash_potion_of_clear_effect"
-  }
-}

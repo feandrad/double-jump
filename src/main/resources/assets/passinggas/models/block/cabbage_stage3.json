@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "passinggas:block/cabbage_stage3"
+  }
+}

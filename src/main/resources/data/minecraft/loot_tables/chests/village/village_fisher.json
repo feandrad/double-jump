@@ -98,7 +98,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "doublejump:cabbage_seeds",
+          "name": "passinggas:cabbage_seeds",
           "weight": 2
         },
         {

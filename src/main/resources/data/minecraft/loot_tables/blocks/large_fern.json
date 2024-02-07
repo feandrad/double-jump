@@ -72,7 +72,7 @@
                   "condition": "minecraft:random_chance"
                 }
               ],
-              "name": "doublejump:cabbage_seeds"
+              "name": "passinggas:cabbage_seeds"
             }
           ]
         }

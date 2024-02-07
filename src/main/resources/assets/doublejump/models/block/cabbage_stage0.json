@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "doublejump:block/cabbage_stage0"
-  }
-}

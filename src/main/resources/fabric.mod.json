@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "doublejump",
+  "id": "passinggas",
   "version": "${version}",
   "name": "Double Jump",
   "description": "Adds cabbages and a new potion effect to Minecraft!",
@@ -11,18 +11,18 @@
     "repo": "https://github.com/feandrad/double-jump"
   },
   "license": "MIT",
-  "icon": "assets/doublejump/icon.png",
+  "icon": "assets/passinggas/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
-      "io.felipeandrade.doublejump.client.DoubleJumpClient"
+      "io.felipeandrade.passinggas.client.DoubleJumpClient"
     ],
     "main": [
-      "io.felipeandrade.doublejump.DoubleJumpMod"
+      "io.felipeandrade.passinggas.DoubleJumpMod"
     ]
   },
   "mixins": [
-    "doublejump.mixins.json"
+    "passinggas.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.14.21",
